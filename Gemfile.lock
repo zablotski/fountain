@@ -107,6 +107,8 @@ GEM
     mime-types (1.23)
     multi_json (1.7.3)
     multipart-post (1.2.0)
+    nested_scaffold (0.2.1)
+      rails (~> 3.2.2)
     nokogiri (1.5.9-x86-mingw32)
     oauth2 (0.8.1)
       faraday (~> 0.8)
@@ -210,6 +212,7 @@ DEPENDENCIES
   hub (>= 1.10.2)
   jquery-rails
   launchy (>= 2.2.0)
+  nested_scaffold
   omniauth
   omniauth-facebook
   quiet_assets (>= 1.0.2)

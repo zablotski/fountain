@@ -1,4 +1,8 @@
 Fountain::Application.routes.draw do
+  #resources :users do
+   # resources :photos
+  #end
+
   authenticated :user do
     root :to => 'home#index'
   end
