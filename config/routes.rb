@@ -1,5 +1,5 @@
 Fountain::Application.routes.draw do
-  
+
 match "/auth/failure" => redirect("/")
   authenticated :user do
     root :to => 'home#index'
@@ -10,4 +10,5 @@ match "/auth/failure" => redirect("/")
   resources :users do
     resources :photos
   end
+  resources :comments
 end

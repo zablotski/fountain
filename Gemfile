@@ -24,9 +24,15 @@ gem "figaro", ">= 0.6.3"
 gem "better_errors", ">= 0.7.2", :group => :development
 gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
 gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
-#gem 'omniauth' 
-#gem 'omniauth-facebook'
+gem 'omniauth' 
+gem 'omniauth-facebook'
 gem 'nested_scaffold'
+gem 'foreigner'
 
-gem "omniauth", "~> 1.1.1"
-gem "omniauth-facebook", "~> 1.4.1"
+gem 'sunspot_rails' #форк для rails
+gem 'sunspot_solr'  #сам Solr
+gem 'progress_bar'  #нужен для индексирования
+group :test, :development do #в группу для разработки и тестирования
+  gem "sunspot-rails-tester" #это нужно для запуска тестов, иначе не работает.
+  #...
+end

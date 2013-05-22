@@ -15,7 +15,7 @@
   <tr>
     <td><%= photo.name %></td>
     <td><%= photo.description %></td>
-    <td><%= photo.url %></td>
+    <td><img src="<%= photo.url %>" width="200" ></a></td>
     <td><%= photo.filter %></td>
     <td><%= link_to 'Show', [photo.user, photo] %></td>
     <td><%= link_to 'Edit', edit_user_photo_path(photo.user, photo) %></td>

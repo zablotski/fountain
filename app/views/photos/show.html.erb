@@ -11,15 +11,23 @@
 </p>
 
 <p>
-  <b>Url:</b>
-  <%= @photo.url %>
+	<img src="<%= @photo.url %>" width="200" ></a>
+  
 </p>
 
 <p>
   <b>Filter:</b>
   <%= @photo.filter %>
 </p>
-
+<h3>Comments</h3>
+<% @photo.comments.each do |comment| %>
+  <div>
+    <strong><%= comment.user_name %></strong>
+    <br />
+    <p><%= comment.body %><p>
+  </div>
+<% end %>
+<%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_user_photo_path(@photo.user, @photo) %> |
 <%= link_to 'Back', user_photos_path(@photo.user) %>
